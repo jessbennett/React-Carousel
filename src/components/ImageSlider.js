@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SliderData } from './SliderData';
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
@@ -22,8 +21,16 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <section className='slider'>
-      <ArrowCircleLeftIcon className='left-arrow' onClick={prevSlide} />
-      <ArrowCircleRightIcon className='right-arrow' onClick={nextSlide} />
+      <ArrowCircleLeftIcon
+        className='left-arrow'
+        onClick={prevSlide}
+        style={{ fontSize: 50 }}
+      />
+      <ArrowCircleRightIcon
+        className='right-arrow'
+        onClick={nextSlide}
+        style={{ fontSize: 50 }}
+      />
       {SliderData.map((slide, index) => {
         return (
           <div
